@@ -1,0 +1,11 @@
+version: 2
+
+sources:
+  - name: DEV
+    database: AG_DEV
+    schema: PUBLIC
+    tables:
+      - name: JHU_COVID_19
+        description: This dataset is coming from John Jopkins University on COVID19
+
+    

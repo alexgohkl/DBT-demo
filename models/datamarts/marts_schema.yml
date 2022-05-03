@@ -1,0 +1,12 @@
+
+version: 2
+
+models:
+  - name: AUS_COVID_MART
+    description: "A datamart for reporting daily COVID cases in AUS"
+    columns:
+      - name: REPORTED_DATE
+        description: "The date which cases are reported"
+        tests:
+          - not_null
+          - unique

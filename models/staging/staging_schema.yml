@@ -1,0 +1,25 @@
+
+version: 2
+
+models:
+  - name: STG_JHU_COVID_19
+    description: "Staging for John Hopkins COVID only dataset"
+    columns:
+      - name: COUNTRY
+        description: "The Country"
+        tests:
+          - not_null
+      - name: REPORTED_DATE
+        description: "The reporting date"
+        tests:
+          - not_null
+      - name: LAST_UPDATED_DATE
+        description: "The date which the database is updated"
+        tests:
+          - not_null
+      - name: LAST_REPORTED_FLAG
+        description: "If True, it is the latest. Otherwise False"
+        tests:
+          - not_null
+          - accepted_values:
+              values: [True, False]

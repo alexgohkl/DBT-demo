@@ -1,0 +1,9 @@
+version: 2
+
+macros:
+  - name: force_non_negative
+    description: A macro to convert negative values or null values to 0
+    arguments:
+      - name: column_name
+        type: integer
+        description: The name of the column you want to convert

@@ -11,6 +11,7 @@ JHU_COVID_19 as (
     select * from {{ source('DEV', 'JHU_COVID_19')}}
 ),
 
+-- data with case_type active and recovered is not reliable, therefore filtered
 STG_JHU_COVID_19 as (
     select
         JHU_COVID_19.COUNTRY_REGION as COUNTRY,
